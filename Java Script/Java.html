@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JS Basics</title>
+</head>
+<body>
+    <script>
+        document.write("Welcome to JavaScript<br>");
+
+        console.log("debugging soon");
+        console.table([10, 20, 30, 40, 50]);
+
+        // Type coercion
+        document.write(10 + "10", "<br>");        // "1010"
+        document.write(10 + +"10", "<br>");       // 20
+        document.write(1 + +"2" + +"10", "<br>"); // 13
+        document.write(10 - "10", "<br>");        // 0
+        document.write(10 * "10", "<br>");        // 100
+        document.write(10 / "10", "<br>");        // 1
+        document.write(10 / "0", "<br>");         // Infinity
+        document.write(10 - "A", "<br>");         // NaN
+
+        // Comparison
+        document.write(10 == "10", "<br>");       // true
+        document.write(10 === "10", "<br>");      // false
+
+        // Floating-point
+        document.write(0.1 + 0.2, "<br>");        // 0.30000000000000004
+        document.write((0.1 + 0.2).toFixed(2), "<br>"); // "0.30"
+        document.write(0.1 + 0.2 == 0.3, "<br>"); // false
+        document.write(0.1 + 0.2 === 0.3, "<br>");// false
+
+        // Boolean arithmetic
+        // true → 1 , false → 0
+        document.write(true + 1, "<br>");         // 2
+        document.write(true / false, "<br>");     // Infinity
+        document.write(1 + "true", "<br>");       // "1true"
+        document.write(true + 1 - "1", "<br>");   // 1
+
+        // Comparisons
+        document.write(3 > 2 > 1, "<br>");        // false
+        document.write(1 < 2 < 3, "<br>");        // true
+
+        // Ternary operator
+        9 > 8 > 7 ? document.write("Javascript") : document.writeln("Frontend Framework");
+
+        // Grading example
+        let marks = 65;
+        let grade = (marks >= 90) ? "A" :
+                    (marks >= 75) ? "B" :
+                    (marks >= 50) ? "C" : "F";
+        document.write("<br>Your grade is: " + grade); 
+    </script>
+</body>
+</html>

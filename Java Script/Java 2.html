@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>variables</title>
+</head>
+<body>
+    <script>
+
+        // var allows redeclaration
+        var x = 100;
+        document.write(x, "<br>");
+
+        var x = 200;
+        document.write(x, "<br>");  // var allows duplicate variables
+
+
+        // var inside block still pollutes global scope
+        var x1 = 100;  // global
+        document.write(x1, "<br>");
+        {
+            var x1 = 200; // overwrites global
+        }
+        document.write(x1, "<br>");  // 200 because of var keyword (global polluting issue)
+
+
+        // function with let vs var
+        function klh_fn() {
+            var y = 100;
+            document.write(y, "<br>"); // 100
+
+            {
+                let y1 = 200; // block-scoped
+                document.write(y1, "<br>"); // 200
+            }
+
+            document.write(y, "<br>");  // 100 
+            // document.write(y1); // Error: y1 is not defined outside block
+        }
+
+        klh_fn();
+
+    </script>
+</body>
+</html>

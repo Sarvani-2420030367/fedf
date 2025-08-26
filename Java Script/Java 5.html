@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Functions</title>
+</head>
+
+<body>
+    <script>
+        
+        let db_func1 = () => {
+            document.write("we are using ARROW FUNCTION <br>");
+        }
+        db_func1();
+
+        let db_func2 = () => {
+            return "we are using ARROW FUNCTION with return <br>";
+        }
+        let msg1 = db_func2();
+        document.write(msg1);
+
+        let db_func3 = (param1) => {
+            document.write(`we are using ARROW FUNCTION with param: ${param1} <br>`);
+        }
+        db_func3("ASYNC CALLS");
+
+
+        let db_func4 = (param1) => {
+            return `we are using ARROW FUNCTION with param + return: ${param1} <br>`;
+        }
+        let msg2 = db_func4("PROMISES");
+        document.write(msg2);
+    </script>
+</body>
+
+</html>
